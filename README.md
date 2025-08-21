@@ -1,4 +1,4 @@
-# tushardemo
-this is my first Git Repository
+# Web Projects
+A collection of web projects 
 <br>
 Author - Tushar Shetty
