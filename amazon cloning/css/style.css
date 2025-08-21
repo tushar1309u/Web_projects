@@ -1,0 +1,121 @@
+/* Reset default browser styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #333;
+}
+
+/* Header styling */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #cb202d; /* Zomato Red */
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+header .logo img {
+    height: 40px;
+}
+
+header ul {
+    list-style: none;
+    display: flex;
+    gap: 25px;
+}
+
+header ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+header ul li a:hover {
+    color: #ffd4d4;
+}
+
+/* Main section */
+main {
+    text-align: center;
+    padding: 50px 20px;
+    background: url('z.png') center/cover no-repeat;
+    height: 70vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+main img {
+    max-width: 250px;
+    animation: fadeInDown 1s ease forwards;
+}
+
+main p {
+    font-size: 1.5rem;
+    color: white;
+    font-weight: bold;
+    animation: fadeInUp 1s ease forwards;
+}
+
+main input {
+    padding: 12px 15px;
+    width: 350px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+main input:focus {
+    box-shadow: 0 0 10px rgba(203, 32, 45, 0.7);
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    background-color: #cb202d;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    font-size: 0.9rem;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+    from { transform: translateY(-50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes fadeInUp {
+    from { transform: translateY(50px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        text-align: center;
+    }
+    header ul {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    main input {
+        width: 90%;
+    }
+}
